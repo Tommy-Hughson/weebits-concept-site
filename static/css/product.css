@@ -1,0 +1,29 @@
+.product__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}   
+.product__info {
+    flex-grow: 1;
+    text-align: center;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    padding: 40px;
+    max-width: 700px;
+}
+.product__info h1 {
+    font-family: ChronicleDisplay-Roman, Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.product__info  p {
+    margin-bottom: 20px;
+}
+.product__image {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 40px;
+}

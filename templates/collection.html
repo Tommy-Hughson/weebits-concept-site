@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}{{collections}}{% endblock%}
+
+{% block main %}
+<section class="collection-title">
+    <h1 class="text-two-lines">Baby Outerwear</h1>
+    <p>Baby outerwear to keep babies snug in winter and cool in summer.</p>
+    <p>Hand knitted merino clothing</p>
+</section>
+
+<section class="collection-container">
+    <div class="collection-navigation">
+        <ul class="collection-navigation__options">
+            <li class="collection-navigation__filter">
+                <span class="collection-navigation__filter-name">Age</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.39 7.6a.54.54 0 00-.78 0L10 12.21 5.39 7.6a.54.54 0 00-.78 0 .55.55 0 000 .77L10 13.76l5.39-5.39a.55.55 0 000-.77z"
+                        fill="currentColor"></path>
+                </svg>
+            </li>
+            <li class="collection-navigation__filter">
+                <span class="collection-navigation__filter-name">Colour</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.39 7.6a.54.54 0 00-.78 0L10 12.21 5.39 7.6a.54.54 0 00-.78 0 .55.55 0 000 .77L10 13.76l5.39-5.39a.55.55 0 000-.77z"
+                        fill="currentColor"></path>
+                </svg>
+            </li>
+            <li class="collection-navigation__filter">
+                <span class="collection-navigation__filter-name">Sort by</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.39 7.6a.54.54 0 00-.78 0L10 12.21 5.39 7.6a.54.54 0 00-.78 0 .55.55 0 000 .77L10 13.76l5.39-5.39a.55.55 0 000-.77z"
+                        fill="currentColor"></path>
+                </svg>
+            </li>
+        </ul>
+    </div>
+    <div class="collection-product__wrapper">
+        {% for product in products %}
+        <a class="product-panel img-scale-hover" href="/products/{{product[3]}}">
+            <img class="product-panel__image" src="{{product[1]}}">
+            <p class="product-panel-title">{{product[0]}}</p>
+            <p class="product-panel-price">${{product[2]}}</p>
+        </a>
+        {% endfor %}
+    </div>
+    <button class="load-more default-button"><span>Load More</span></button>
+</section>
+{% endblock %}
